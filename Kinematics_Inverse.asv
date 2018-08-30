@@ -1,6 +1,6 @@
 function Kinematics_Inverse
 
-fun = @Kinematics_Inv_Equations;
+fun = @Kinematics_Inv_;
 x0 = [0.01,0.03,0.001];
 x = fsolve(fun,x0);
 

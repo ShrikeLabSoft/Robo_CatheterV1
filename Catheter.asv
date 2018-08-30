@@ -45,7 +45,7 @@ function main
 % Mechanical parameters and constraints
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-length_vertebra_meters = 0.005;                                            
+length_vertebra_meters = 0.005;
 max_angle_vertebrae_degree = 30;
 free_vertebra = 5;
 constrained_vertebra = 2;
@@ -54,14 +54,6 @@ max_angle_vertebrae_radians = degtorad(max_angle_vertebrae_degree);
 
 mech_parameters = [length_vertebra_meters,max_angle_vertebrae_radians,
   free_vertebra, constrained_vertebra]
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Main Program 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Kinematics(mech_parameters);
-Microcontroller();
-GUI(mech_parameters);
 
 
 end

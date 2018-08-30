@@ -1,3 +1,3 @@
-function GUI
+function GUI(mech_parameters)
 
 end
