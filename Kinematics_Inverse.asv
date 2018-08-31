@@ -1,9 +1,12 @@
-function Kinematics_Inverse
-
-fun = @Kinematics_Inv_;
-x0 = [0.01,0.03,0.001];
-x = fsolve(fun,x0);
-
-disp(x)
+function Kinematics_Inverse(mech_parameters,vector)
+    
+    Kinematics_Inverse_Solver(mech_parameters,vector);
+    
+    function Kinematics_Inverse_Solver(mech_parameters, vector)
+        initial_solutions = [0.01,0.03,0.001];
+        %final_solution = fsolve(equations,initial_solutions);
+        final_solution = fsolve(@(x) Teth3(, P, H, L), initial_solutions);
+        disp(final_solution)
+    end
 
 end
