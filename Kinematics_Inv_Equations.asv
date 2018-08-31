@@ -25,20 +25,18 @@
 %   \FUNCTION_CALLED
 % 
 %   \ABSTRACT
-%   This function is a set of equations in which the input is an array with
-%   the desired xy final coordinates of the catheter un a 2D plane, and the output is 
-%   an array with the xy coordinates of the last vertebrae plus the
-%   needed displacement of the linear actuator.
-%
+%   This function is a set of equations in which the input is the desired 
+%   xyz final coordinates of the catheter, and the outpu
 %   \COMMENTS
-%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 function solutions = Kinematics_Inv_Equations(initial_constraints,mech_parameters,vector)
 
   x_f = vector(1);
   y_f = vector(2);
-  
+  z_f = vector(3);
   N = mech_parameters(3);
   
   a= sqrt(initial_constraints(2)*atan(((atan(initial_constraints(2)/initial_constraints(1))*N)/(2*N-1))^2));

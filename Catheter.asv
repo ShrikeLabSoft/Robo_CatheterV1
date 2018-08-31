@@ -19,6 +19,13 @@
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    D E F I N E S
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   \FUNCTION   main
 %   \CREATION             08/29/2018
@@ -26,9 +33,6 @@
 %   \GLOBAL_VARS
 %   \OUTPUT
 %   \FUNCTION_CALLED
-%   Kinematics
-%   Microcontroller
-%   GUI
 % 
 %   \ABSTRACT
 %
@@ -47,11 +51,12 @@ max_angle_vertebrae_degree = 30;
 free_vertebra = 5;
 constrained_vertebra = 2;
 diameter_vertebra = 0.005;
-initial_wire_length = 0.05;
+initial_wire_leng
 
 max_angle_vertebrae_radians = degtorad(max_angle_vertebrae_degree);
 
-mech_parameters = [length_vertebra_meters,max_angle_vertebrae_radians, free_vertebra, constrained_vertebra, diameter_vertebra, initial_wire_length];
+mech_parameters = [length_vertebra_meters,max_angle_vertebrae_radians,
+  free_vertebra, constrained_vertebra, diameter_vertebra, initial_wire_length]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Main Program 
@@ -60,7 +65,6 @@ mech_parameters = [length_vertebra_meters,max_angle_vertebrae_radians, free_vert
 Kinematics(mech_parameters);
 Microcontroller();
 GUI(mech_parameters);
-
 
 
 end
